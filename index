@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MasterZack's JeevanKatha</title>
 <style>
-  .center {
-    text-align: center;
-  }
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h2 {
+      font-size: 1.5em;
+    }
+
+    ul {
+      list-style-type: none;
+    }
 </style>
 </head>
 <body>
   <h1 class="center">Hi, I'm Master Zack</h1>
-  <h3 class="center">You can also call me Zackie 😉</h3>
+  <h2> class="center">You can also call me Zackie 😉</h2>
 
-  <p align="left"> <img src="https://komarev.com/ghpvc/?username=masterzack69&label=Profile%20views&color=0e75b6&style=flat" alt="masterzack69" /> </p>
+   <h4>From Islam to Atheism</h4>
 
-  <h3> Know Something about me </h3>
-  <p>A 16y/o kiddo, Javascript was my first programming language and C++ is currently my Primary language and Python being my secondary language (it was my primary language before i learned C++)</p>
+  <p>As far as I know, no one is born an Atheist; not in India at least. I too was once a deeply religious person. I did "things" without much thinking. Didn't think about the reasoning behind them. However, one thing changed my course. And out of all things in this world, they were mushrooms. Yes, you read that correctly. Mushroom turned this once-a-muslim into an Atheist. Let's talk in detail!</p>
+
+  <p>So, when I was young (I'm still sweet 16 😎), I mean like 9 or something, I was a tv addict like all the other kids. In every "cartoonish" anime, I watched people eat mushrooms like it was the best food in the world. I fantasized the taste of mushroom soup each time I saw Doraemon. Watching that, the young zack began wanting to eat them too. He started asking his parents for that. But sadly 😔, my family told my younger self that Mushrooms are "haraam" in Islam (sounds so fuckin stupid). I asked them why but received no actual answer.</p>
+
+  <p>After a few days, I was having lunch in school with my classmates (classmates is a crucial word here, cuz no actual friends). I do recall that person's name, but I won't mention him here because I don't feel like it. Let us call him "X". So, Person X who was in the same class as mine was having his lunch. He asked me if I wanted some. I was ready, but then I saw his lunch. It was 🍄. I told him that it is considered "Haraam" in my religion, so I can't have that.</p>
+
+  <p>And that was the time I questioned myself, "Why does he get to eat and I don't?" This was the first time in History I questioned myself something. I began looking for the answer. And of course, there is no valid reason behind it. It really is just a stupid thing people have been following throughout time. By 2017 (the only reason I remember the dates is because I remember in which standard I was studying that time), I took it to the extreme lvl and stopped doing every religious activity my family expected me to perform. I do not see meaning behind them. Not just Islam, I looked into every religion there is. Prayers and stuff, they are all meaningless. It doesn't make any sense providing food to a statue when there are people literally starving to death. (now, some of you gen z kids might actually not care about that and make a joke out of it. I hate the existence of you all. You all should literally, actually, fuckinly die. And I am so serious about it beyond your comprehension. I cannot express the anger I have while I'm writing this.)</p>
+
+  <p>My family told me that if I don't stop doing this, I will incur Allah's Wraith. Another utterly meaningless thing to say. All my life, I thought that a person should be good. If he is good, he is saved. And now this world was telling me that I will burn in hell just because I have stopped following instructions of the non-existent ludicrous fictional being called God. At least for me, it meant that it doesn't fucking matter if u do bad stuff or good stuff, you just need to have faith in something that has no proof of existence and you are good to go. That was some seriously messed up shit.</p>
+
+  <p>My aunt (she is very stupid) bragged about how Islam was the first religion in the world (spreading stupid stuff even after being an Art Student). And yea, that was stupid too. Because historically, Islam is like a newborn baby.</p>
+
+  <p>Now, I had two questions:</p>
 
   <ul>
-    <li>💀 i sometimes feel like being a nihilist </li>
-    <li>⚡ Fun fact :- <strong>My existence is a Joke 🙂.</strong></li>
+    <li>If Allah had created the world, then why Islam popped up so late?</li>
+    <li>If Allah, God, Bhagwan are the same (according to the so-called genius people of society), then why do we have separate religions who are fighting each other and have different teachings?</li>
   </ul>
-
-  <h3>Social Media (I am inactive btw):</h3>
-  <p>
-    <a href="https://twitter.com/zack14thavenger" target="_blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="zack14thavenger" height="30" width="40" /></a>
-    <a href="https://instagram.com/zack14thavenger" target="_blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="zack14thavenger" height="30" width="40" /></a>
-    <a href="https://www.reddit.com/user/Master_Zack" target="_blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/reddit.svg" alt="Master_Zacm" height ="30" width="40" /> </a>
-  </p>
-
-  <h3>Languages and Tools:</h3>
-  <p>
-    <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/></a>
-    <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/></a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/></a>
-    <a href="https://kotlinlang.org" target="_blank" rel="noreferrer"><img src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg" alt="kotlin" width="40" height="40"/></a>
-    <a href="https://www.python.org" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/></a>
-  </p>
-
-  <h2>My Stats</h2>
-  <p><img align="center" src="https://github-readme-stats.vercel.app/api?username=masterzack69&show_icons=true&locale=en" alt="masterzack69" /></p>
-
-  <h2>My Most used languages </h2>
-  <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=masterzack69&show_icons=true&locale=en&layout=compact" alt="masterzack69" /></p>
-  <br>
+  <p> Of course, there exists no plausible explanation. The whole foundation of Religions is just stupid fiction which stupid people in stupid time believed and stupid people now follow. </p>
 </body>
 </html>
