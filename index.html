@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html>
 <head>
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -89,8 +88,8 @@
     <a href="atheism.html">From Islam to Atheism</a>
   </div>
 
-  <div id="main">
-    <button class="openbtn" onclick="openNav()">☰ </button>
+  <div id="main" onclick="closeNav()">
+  <button class="openbtn" onclick="openNav()">☰ </button>
   </div>
 
   <script>
@@ -102,7 +101,7 @@
     function closeNav() {
       document.getElementById("sidebar").style.width = "0";
       document.getElementById("main").style.marginRight= "0";
-    }
+    
   </script>
     <div id ="content">
        
