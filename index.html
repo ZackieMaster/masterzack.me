@@ -13,8 +13,8 @@
       background-color: black;
       color: white;
       font-family: Arial, sans-serif;
-      margin: 15px;
       display: flex;
+      margin: 15px;
     }
 
     h2 {
@@ -34,30 +34,32 @@
       background-color: #333;
       padding: 20px;
       display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
     }
 
     #sidebarButton {
-      display: none; 
       cursor: pointer;
     }
 
     @media (max-width: 768px) {
+      #sidebar {
+        display: none;
+      }
+
       #sidebarButton {
         display: block;
       }
-
-      #sidebar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-      }
+        #sidebar.show {
+            display: block;
+        }
     }
 </style>
 </head>
 <body>
-    <div id="sidebarButton">&#9776; Menu</div>
-
+      <div id="sidebarButton" onclick="toggleSidebar()">&#9776; Menu</div>
   <div id="sidebar">
     <h3><u>Checkout</u></h3>
     <ul>
@@ -72,9 +74,9 @@
     </div>
 
     <script>
-    document.getElementById('sidebarButton').addEventListener('click', function () {
-      document.getElementById('sidebar').style.display = 'block';
-    });
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('show');
+    }
     </script>
 </body>
 </html>
