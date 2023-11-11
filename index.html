@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -29,56 +29,87 @@
       flex: 1;
     }
 
-    #sidebar {
-      width: 200px;
-      background-color: #333;
-      padding: 20px;
-      display: none;
+     #sidebar {
+      height: 100%;
+      width: 0;
       position: fixed;
       top: 0;
-      left: 0;
-      height: 100%;
+      right: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      color: white;
     }
 
-    #sidebarButton {
+    #sidebar a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    #sidebar a:hover {
+      color: #f1f1f1;
+    }
+
+    #sidebar .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    #main {
+      transition: margin-right .5s;
+      padding: 16px;
+    }
+
+    .openbtn {
+      font-size: 20px;
       cursor: pointer;
+      background-color: #111;
+      color: white;
+      padding: 10px 15px;
+      border: none;
     }
 
-    @media (max-width: 768px) {
-      #sidebar {
-        display: none;
-      }
-
-      #sidebarButton {
-        display: block;
-      }
-        #sidebar.show {
-            display: block;
-        }
+    .openbtn:hover {
+      background-color: #444;
     }
-</style>
+
+  </style>
 </head>
 <body>
-      <div id="sidebarButton" onclick="toggleSidebar()">&#9776; Menu</div>
-  <div id="sidebar">
-    <h3><u>Checkout</u></h3>
-    <ul>
-      <li><a href="atheism.html">From Islam to Atheism</a></li>
-    </ul>
+      <div id="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="atheism.html">From Islam to Atheism</a>
   </div>
+
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
+  </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("sidebar").style.width = "250px";
+      document.getElementById("main").style.marginRight = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("sidebar").style.width = "0";
+      document.getElementById("main").style.marginRight= "0";
+    }
+  </script>
     <div id ="content">
        
   <h1><center>Hi, I'm Master Zack</center></h1>
   <h2><center> You can also call me Zackie 😉</center></h2>
         <p> Well, I basically got this domain for 1 year and then I thought if I have domain, it should be hosted too. So, I hosted it. After that, I thought now that I have a web page, I should have some content too. That's why, I'm going to write some topic about my life on this website which you can read them through the sidebar</p>
     </div>
-
-    <script>
-    function toggleSidebar() {
-      document.getElementById('sidebar').classList.toggle('show');
-    }
-    </script>
-</body>
-</html>
-
+      </body>
+      </html>
   
