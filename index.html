@@ -36,7 +36,7 @@
       right: 0;
       background-color: #111;
       overflow-x: hidden;
-      transition: 0.5s;
+      transition: 0.2s;
       padding-top: 60px;
       color: white;
     }
@@ -47,7 +47,7 @@
       font-size: 18px;
       color: white;
       display: block;
-      transition: 0.3s;
+      transition: 0.2s;
     }
 
     #sidebar a:hover {
@@ -89,11 +89,12 @@
   </div>
 
   <div id="main" onclick="closeNav()">
-  <button class="openbtn" onclick="openNav()">☰ </button>
+  <button class="openbtn" onclick="openNav(event)">☰ </button>
   </div>
 
   <script>
-    function openNav() {
+    function openNav(event) {
+      event.stopPropagation();
       document.getElementById("sidebar").style.width = "250px";
       document.getElementById("main").style.marginRight = "250px";
     }
@@ -101,6 +102,13 @@
     function closeNav() {
       document.getElementById("sidebar").style.width = "0";
       document.getElementById("main").style.marginRight= "0";
+    }
+      document.addEventListener('click', function(event) {
+      var sidebar = document.getElementById('sidebar');
+      if (event.target !== sidebar && !sidebar.contains(event.target)) {
+        closeNav();
+      }
+    });
     
   </script>
     <div id ="content">
