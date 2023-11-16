@@ -39,6 +39,7 @@
       transition: 0.4s;
       padding-top: 60px;
       color: white;
+      min-width: 250px;
        }
 
     #sidebar a {
@@ -49,6 +50,18 @@
       display: block;
       transition: 0.2s;
     }
+
+    @media (max-width: 768px) {
+  #sidebar {
+    width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  #sidebar {
+    width: 75%;
+  }
+}
 
     #sidebar a:hover {
       color: #f1f1f1;
