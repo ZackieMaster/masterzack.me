@@ -56,7 +56,7 @@
       position: fixed;
       top: 0;
       right: 0;
-      background-color: 0;
+      background-color: #111;
       overflow-x: hidden;
       transition: width 0.4s;
       color: white;
@@ -157,6 +157,12 @@ function toggleNav() {
     } else {
         openNav();
         sidebar.style.backgroundColor = "#111";
+        setTimeout(function () {
+            sidebar.style.transition = "none";
+        }, 400); // 
+        setTimeout(function () {
+            sidebar.style.transition = "width 0.4s, background-color 0.4s";
+        }, 500); 
     }
 }
 
