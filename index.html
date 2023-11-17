@@ -34,22 +34,6 @@
       list-style-type: none;
     }
 
-    #content {
-  flex: 1;
-  opacity: 0;
-  animation: fadeIn 1s forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-
      #sidebar {
       height: 100%;
       width: 0%;
@@ -156,14 +140,7 @@ function toggleNav() {
         closeNav();
     } else {
         openNav();
-        sidebar.style.backgroundColor = "#111";
-        setTimeout(function () {
-            sidebar.style.transition = "none";
-        }, 400); // 
-        setTimeout(function () {
-            sidebar.style.transition = "width 0.4s, background-color 0.4s";
-        }, 500); 
-    }
+  }
 }
 
 document.addEventListener('click', function (event) {
