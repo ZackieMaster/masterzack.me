@@ -26,9 +26,25 @@
     font-weight: 400; 
     line-height: 29px;
   }
+
+  #content {
+  flex: 1;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
   </style>
   </head>
   <body>
+    <div id="content">
     <h3><u>The Anime Journey</u></h3>
     <p>It all began in Fall 2019 when I just got recovered from my  life-threatening disease (name not to be disclosed). Sunday 6'O clock in the morning, when everyone in my family was asleep, I was awake and surfing through the internet on my Redmi 4X. Surfing the internet this early without even washing the face was like a daily habit of mine which I started doing when I was like 6 or 7. I'm glad that I don't do this kind of stuff now. </p>
     
@@ -51,5 +67,6 @@
     <p> I watched Death Note, Steins Gate, Magi, Attack on Titan, Slime Reincarnation, Parasyte, Overlord, Re Zero, High School Dxd and a lot of other stuff. Watching anime back then was a little hard as I had limited data. Though, I have unlimited 5G now and archivist access. I watch only the best encodes now. The ones who are like 2GB per ep. </p>
 
     <p><u>Important thing: I watched Your Name long before Demon Slayer but I cannot remember when was it. I didn't watch it through DTI, it was share to me by a friend. Maybe it was after Zatch Bell or Zinba. Well, who cares. Because I certainly don't</u></p> 
+    </div>
   </body>
 </html>
