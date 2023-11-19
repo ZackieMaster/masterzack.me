@@ -106,12 +106,58 @@
   </style>
 </head>
 <body>
+  
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<div id="content-atheism" class="content-page"></div>
+<div id="content-anime" class="content-page"></div>
+<div id="content-quotes" class="content-page"></div>
+<div id="content-index" class="content-page"></div>
+  
+
       <div id="sidebar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-    <a href="atheism.html">From Islam to Atheism</a>
-    <a href="anime.html"> The Anime Journey</a>
-    <a href="quotes.html">Some Important Quotes</a>
+    <a href="javascript:void(0)" onclick="loadPage('atheism.html')">From Islam to Atheism</a>
+<a href="javascript:void(0)" onclick="loadPage('anime.html')">The Anime Journey</a>
+<a href="javascript:void(0)" onclick="loadPage('quotes.html')">Some Important Quotes</a>
+<a href="javascript:void(0)" onclick="loadPage('index.html')">Home</a>
+
       </div>
+      <script>
+        function loadPage(pageUrl) {
+    if (pageUrl === 'index.html') {
+        
+        $("#content").html(`
+            <h1><center>Hi, I'm Master Zack</center></h1>
+            <h2><center>You can also call me Zackie </center></h2>
+            <p>Well, I basically got this domain for 1 year and then I thought if I have domain, it should be hosted too. So, I hosted it. After that, I thought now that I have a web page, I should have some content too. That's why, I'm going to write some topic about my life on this website which you will be able to read through the sidebar</p>
+        `);
+        closeNav();
+        return;
+    }
+    $.ajax({
+        url: pageUrl,
+        type: "GET",
+        dataType: "html",
+        success: function (data) {
+            
+            $("#content").html(data);
+            closeNav(); 
+        },
+        error: function (xhr, status, error) {
+            console.error("Error loading page: " + status, error);
+        }
+    });
+}
+
+function getContentContainerId(pageUrl) {
+    
+    var pageName = pageUrl.split(".")[0];
+    return "content-" + pageName;
+}
+
+
+      </script>
 
   <div id="main">
     <button class="openbtn" onclick="toggleNav()">☰ </button>
@@ -154,7 +200,7 @@ document.addEventListener('click', function (event) {
     <div id="content">
        
   <h1><center>Hi, I'm Master Zack</center></h1>
-  <h2><center> You can also call me Zackie 😉</center></h2>
+  <h2><center> You can also call me Zackie </center></h2>
         <p> Well, I basically got this domain for 1 year and then I thought if I have domain, it should be hosted too. So, I hosted it. After that, I thought now that I have a web page, I should have some content too. That's why, I'm going to write some topic about my life on this website which you will be able to read through the sidebar</p>
     </div>
       </body>
