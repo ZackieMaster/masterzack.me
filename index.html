@@ -42,7 +42,7 @@
       right: 0;
       background-color: #111;
       overflow-x: hidden;
-      transition: width 0.4s;
+      transition: width 0.3s;
       color: white;
      }
 
@@ -173,8 +173,9 @@ function getContentContainerId(pageUrl) {
 }
 
 function closeNav() {
-    document.getElementById("sidebar").style.width = "0";
-    
+    setTimeout(function () {
+        document.getElementById("sidebar").style.width = "0";
+    }, 50);
 }
 
 function toggleNav() {
