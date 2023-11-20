@@ -116,7 +116,6 @@
 <div id="content-anime" class="content-page"></div>
 <div id="content-quotes" class="content-page"></div>
 <div id="content-index" class="content-page"></div>
-  
 
       <div id="sidebar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
@@ -127,17 +126,21 @@
 
       </div>
       <script>
+      
+     var homepageContent = `
+    <h1><center>Hi, I'm Master Zack</center></h1>
+    <h2><center>You can also call me Zackie </center></h2>
+    <p>Well, I basically got this domain for 1 year and then I thought if I have a domain, it should be hosted too. So, I hosted it. After that, I thought now that I have a web page, I should have some content too. That's why, I'm going to write some topics about my life on this website which you will be able to read through the sidebar</p>
+`;
+
         function loadPage(pageUrl) {
-    if (pageUrl === 'index.html') {
-        
-        $("#content").html(`
-            <h1><center>Hi, I'm Master Zack</center></h1>
-            <h2><center>You can also call me Zackie </center></h2>
-            <p>Well, I basically got this domain for 1 year and then I thought if I have domain, it should be hosted too. So, I hosted it. After that, I thought now that I have a web page, I should have some content too. That's why, I'm going to write some topic about my life on this website which you will be able to read through the sidebar</p>
-        `);
+          if (pageUrl === 'index.html') {
+        $("#content").html(homepageContent);
         closeNav();
+        history.pushState({ content: homepageContent }, null, "/");
         return;
     }
+    
     $.ajax({
         url: pageUrl,
         type: "GET",
@@ -149,8 +152,7 @@
             var pageName = pageUrl.split(".")[0];
             var newUrl = (pageName === "index") ? "/" :"/" + pageName;
 
-            history.replaceState(null,null,"/");
-            history.pushState(null, null, newUrl);
+            history.pushState({ content: data }, null, newUrl);
             
             closeNav(); 
         },
@@ -158,6 +160,7 @@
             console.error("Error loading page: " + status, error);
         }
     });
+
 }
 
 function getContentContainerId(pageUrl) {
@@ -165,8 +168,15 @@ function getContentContainerId(pageUrl) {
     var pageName = pageUrl.split(".")[0];
     return "content-" + pageName;
 }
-
-
+window.addEventListener('popstate', function (event) {
+    if (event.state && event.state.content) {
+        $("#content").html(event.state.content);
+    } else {
+        
+        $("#content").html(homepageContent)
+    }
+});
+      
       </script>
 
   <div id="main">
@@ -212,7 +222,7 @@ document.addEventListener('click', function (event) {
        
   <h1><center>Hi, I'm Master Zack</center></h1>
   <h2><center> You can also call me Zackie </center></h2>
-        <p> Well, I basically got this domain for 1 year and then I thought if I have domain, it should be hosted too. So, I hosted it. After that, I thought now that I have a web page, I should have some content too. That's why, I'm going to write some topic about my life on this website which you will be able to read through the sidebar</p>
+        <p> Well, I basically got this domain for 1 year and then I thought if I have a domain, it should be hosted too. So, I hosted it. After that, I thought now that I have a web page, I should have some content too. That's why, I'm going to write some topic about my life on this website which you will be able to read through the sidebar</p>
     </div>
       </body>
 </html>
