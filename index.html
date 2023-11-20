@@ -134,6 +134,7 @@
 `;
 
         function loadPage(pageUrl) {
+            closeNav();
           if (pageUrl === 'index.html') {
         $("#content").html(homepageContent);
         closeNav();
@@ -175,7 +176,6 @@ window.addEventListener('popstate', function (event) {
         
         $("#content").html(homepageContent)
     }
-});
       
       </script>
 
