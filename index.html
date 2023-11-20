@@ -102,7 +102,6 @@
         width: 0;
         padding-top: 11%;
     }
-    
         
         }
 
@@ -119,10 +118,10 @@
 
       <div id="sidebar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-    <a href="javascript:void(0)" onclick="loadPage('atheism.html')">From Islam to Atheism</a>
-<a href="javascript:void(0)" onclick="loadPage('anime.html')">The Anime Journey</a>
-<a href="javascript:void(0)" onclick="loadPage('quotes.html')">Some Important Quotes</a>
-<a href="javascript:void(0)" onclick="loadPage('index.html')">Home</a>
+    <a href="javascript:void(0)" onclick="loadPage('atheism.html')">︲⋗・From Islam to Atheism</a>
+<a href="javascript:void(0)" onclick="loadPage('anime.html')">︲⋗・The Anime Journey</a>
+<a href="javascript:void(0)" onclick="loadPage('quotes.html')">︲⋗・Some Important Quotes</a>
+<a href="javascript:void(0)" onclick="loadPage('index.html')">︲⋗・Home</a>
 
       </div>
       <script>
@@ -132,9 +131,8 @@
     <h2><center>You can also call me Zackie </center></h2>
     <p>Well, I basically got this domain for 1 year and then I thought if I have a domain, it should be hosted too. So, I hosted it. After that, I thought now that I have a web page, I should have some content too. That's why, I'm going to write some topics about my life on this website which you will be able to read through the sidebar</p>
 `;
-
         function loadPage(pageUrl) {
-            
+          closeNav();
           if (pageUrl === 'index.html') {
         $("#content").html(homepageContent);
         closeNav();
@@ -169,6 +167,7 @@ function getContentContainerId(pageUrl) {
     var pageName = pageUrl.split(".")[0];
     return "content-" + pageName;
 }
+
 window.addEventListener('popstate', function (event) {
     if (event.state && event.state.content) {
         $("#content").html(event.state.content);
@@ -176,6 +175,7 @@ window.addEventListener('popstate', function (event) {
         
         $("#content").html(homepageContent)
     }
+});
       
       </script>
 
