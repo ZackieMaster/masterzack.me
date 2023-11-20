@@ -145,6 +145,13 @@
         success: function (data) {
             
             $("#content").html(data);
+
+            var pageName = pageUrl.split(".")[0];
+            var newUrl = (pageName === "index") ? "/" :"/" + pageName;
+
+            history.replaceState(null,null,"/");
+            history.pushState(null, null, newUrl);
+            
             closeNav(); 
         },
         error: function (xhr, status, error) {
