@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novel Chapters</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+	.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#chapters {
+    list-style-type: none;
+    padding: 0;
+}
+
+.chapter-title {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.arrow {
+    font-size: 1.2em;
+}
+
+.chapter-content {
+    padding: 10px 0;
+}
+</style>
+<body>
+    <div class="container">
+        <h1>My Novel</h1>
+        <ul id="chapters">
+            <li>
+                <div class="chapter-title">
+                    <span>Chapter 1</span>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="chapter-content" style="display: none;">
+                    
+                </div>
+            </li>
+            <li>
+                <div class="chapter-title">
+                    <span>Chapter 2</span>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="chapter-content" style="display: none;">
+                    
+                </div>
+            </li>
+                <li>
+                <div class="chapter-title">
+                    <span>Chapter 3</span>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="chapter-content" style="display: none;">
+                    
+                </div>
+            </li>
+                <li>
+                <div class="chapter-title">
+                    <span>Chapter 4</span>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="chapter-content" style="display: none;">
+                    
+                </div>
+            </li>
+                <li>
+                <div class="chapter-title">
+                    <span>Chapter 5</span>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="chapter-content" style="display: none;">
+                    
+                </div>
+            </li>
+                <li>
+                <div class="chapter-title">
+                    <span>Chapter 6</span>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="chapter-content" style="display: none;">
+                    
+                </div>
+            </li>
+                <li>
+                <div class="chapter-title">
+                    <span>Chapter 7</span>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="chapter-content" style="display: none;">
+                    
+                </div>
+            </li>
+                <li>
+                <div class="chapter-title">
+                    <span>Chapter 8</span>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="chapter-content" style="display: none;">
+                    
+                </div>
+            </li>
+                <li>
+                <div class="chapter-title">
+                    <span>Chapter 9</span>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="chapter-content" style="display: none;">
+                    
+                </div>
+            </li>
+                <li>
+                <div class="chapter-title">
+                    <span>Chapter 10</span>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="chapter-content" style="display: none;">
+                    
+                </div>
+            </li>
+                <li>
+                <div class="chapter-title">
+                    <span>Chapter 11</span>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="chapter-content" style="display: none;">
+                    
+                </div>
+            </li>
+                <li>
+                <div class="chapter-title">
+                    <span>Chapter 12</span>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="chapter-content" style="display: none;">
+                    
+                </div>
+            </li>
+                <li>
+                <div class="chapter-title">
+                    <span>Chapter 13</span>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="chapter-content" style="display: none;">
+                    
+                </div>
+            </li>
+                <li>
+                <div class="chapter-title">
+                    <span>Chapter 14</span>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="chapter-content" style="display: none;">
+                    
+                </div>
+            </li>
+                <li>
+                <div class="chapter-title">
+                    <span>Chapter 15</span>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="chapter-content" style="display: none;">
+                    
+                </div>
+            </li>
+                <li>
+                <div class="chapter-title">
+                    <span>Chapter 16</span>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="chapter-content" style="display: none;">
+                    
+                </div>
+            </li>
+            
+            <!-- Add more chapters as needed -->
+        </ul>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+    var chapterTitles = document.querySelectorAll(".chapter-title");
+
+    chapterTitles.forEach(function(chapterTitle) {
+        chapterTitle.addEventListener("click", function() {
+            var content = this.nextElementSibling;
+
+            // Get chapter ID from the span element inside the chapter-title
+            var chapterId = this.querySelector("span").innerText.toLowerCase().replace(/\s+/g, '-');
+            
+            // Path to chapter text file
+            var chapterFile = "chapters/" + chapterId + ".txt";
+
+            // Fetch chapter content from text file
+            fetch(chapterFile)
+                .then(response => response.text())
+                .then(data => {
+                    // Set fetched content to the chapter-content element
+                    content.innerHTML = data;
+                    // Toggle visibility of chapter content
+                    content.style.display = (content.style.display === "block") ? "none" : "block";
+                })
+                .catch(error => {
+                    console.error('Error fetching chapter content:', error);
+                });
+        });
+    });
+});
+
+    </script></script>
+</body>
+</html>
