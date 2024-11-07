@@ -32,7 +32,20 @@
       transition: 0.2s;
     }
 
-    #sidebar a:hover {
+     .openbtn {
+      font-size: 20px;
+      cursor: pointer;
+      background-color: #111;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      position: absolute;
+      left: 0;
+    }
+
+    .openbtn:hover {
+      background-color: #444;
+    }   #sidebar a:hover {
       color: #f1f1f1;
     }
 
@@ -51,28 +64,7 @@
       position: relative;
         }     
 
-    .openbtn {
-    /* Keep your existing styles */
-    font-size: 20px;
-    cursor: pointer;
-    background-color: #111;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    position: absolute;
-    left: 0;
-    /* Add these new properties */
-    transition: transform 0.3s ease;
-    transform-origin: center;
-}
-
-.openbtn.rotated {
-    transform: rotate(-180deg);
-}
-
-    .openbtn:hover {
-      background-color: #444;
-    }
+   
     
     @media only screen and (min-width: 600px) {
     #sidebar {
