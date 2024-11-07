@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="style.css">
 <title>MasterZack's JeevanKatha</title>
 <style>
-     #sidebar {
+         #sidebar {
       height: 100%;
       width: 0%;
       position: fixed;
@@ -20,7 +20,7 @@
       overflow-x: hidden;
       transition: width 0.3s;
       color: white;
-     }
+         }
 
 
     #sidebar a {
@@ -155,18 +155,17 @@
             
             closeNav(); 
         },
-    function openNav() {
-    event.stopPropagation();
+        function openNav() {
+          event.stopPropagation();
     var width = window.innerWidth;
     var sidebarWidth = (width >= 600) ? "20%" : "72%";
     document.getElementById("sidebar").style.width = sidebarWidth;
-    document.querySelector('.openbtn').classList.add('rotated');
+
 }
 
 function closeNav() {
     setTimeout(function () {
         document.getElementById("sidebar").style.width = "0";
-        document.querySelector('.openbtn').classList.remove('rotated');
     }, 50);
 }
 
@@ -174,19 +173,12 @@ function toggleNav() {
     var sidebar = document.getElementById("sidebar");
     var width = window.innerWidth;
     var sidebarWidth = (width >= 600) ? "20%" : "72%";
-    var button = document.querySelector('.openbtn');
 
     if (sidebar.style.width === sidebarWidth) {
         closeNav();
     } else {
         openNav();
-    }
-}
-    error: function (xhr, status, error) {
-            console.error("Error loading page: " + status, error);
-        }
-    });
-
+  }
 }
 
 function getContentContainerId(pageUrl) {
