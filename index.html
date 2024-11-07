@@ -52,15 +52,23 @@
         }     
 
     .openbtn {
-      font-size: 20px;
-      cursor: pointer;
-      background-color: #111;
-      color: white;
-      padding: 10px 15px;
-      border: none;
-      position: absolute;
-      left: 0;
-    }
+    /* Keep your existing styles */
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    position: absolute;
+    left: 0;
+    /* Add these new properties */
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
+
+.openbtn.rotated {
+    transform: rotate(-180deg);
+}
 
     .openbtn:hover {
       background-color: #444;
@@ -147,7 +155,34 @@
             
             closeNav(); 
         },
-        error: function (xhr, status, error) {
+    function openNav() {
+    event.stopPropagation();
+    var width = window.innerWidth;
+    var sidebarWidth = (width >= 600) ? "20%" : "72%";
+    document.getElementById("sidebar").style.width = sidebarWidth;
+    document.querySelector('.openbtn').classList.add('rotated');
+}
+
+function closeNav() {
+    setTimeout(function () {
+        document.getElementById("sidebar").style.width = "0";
+        document.querySelector('.openbtn').classList.remove('rotated');
+    }, 50);
+}
+
+function toggleNav() {
+    var sidebar = document.getElementById("sidebar");
+    var width = window.innerWidth;
+    var sidebarWidth = (width >= 600) ? "20%" : "72%";
+    var button = document.querySelector('.openbtn');
+
+    if (sidebar.style.width === sidebarWidth) {
+        closeNav();
+    } else {
+        openNav();
+    }
+}
+    error: function (xhr, status, error) {
             console.error("Error loading page: " + status, error);
         }
     });
@@ -176,31 +211,7 @@ window.addEventListener('popstate', function (event) {
   </div>
 
   <script>
-    function openNav() {
-          event.stopPropagation();
-    var width = window.innerWidth;
-    var sidebarWidth = (width >= 600) ? "20%" : "72%";
-    document.getElementById("sidebar").style.width = sidebarWidth;
-        
-}
-
-function closeNav() {
-    setTimeout(function () {
-        document.getElementById("sidebar").style.width = "0";
-    }, 50);
-}
-
-function toggleNav() {
-    var sidebar = document.getElementById("sidebar");
-    var width = window.innerWidth;
-    var sidebarWidth = (width >= 600) ? "20%" : "72%";
-
-    if (sidebar.style.width === sidebarWidth) {
-        closeNav();
-    } else {
-        openNav();
-  }
-}
+    
 
 document.addEventListener('click', function (event) {
     var sidebar = document.getElementById('sidebar');
