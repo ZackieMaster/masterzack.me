@@ -1,0 +1,23 @@
+{
+    "rewrites": [
+        {
+            "source": "/anime",
+            "destination": "/anime.html"
+        },
+        {
+            "source": "/atheism",
+            "destination": "/atheism.html"
+        },
+        {
+            "source": "/quotes",
+            "destination": "/quotes.html"
+        },
+        {
+            "source": "/AI",
+            "destination": "/AI.html"
+        },
+        {
+            "source": "/OTT",
+            "destination": "/OTT.html"
+        }
+}
