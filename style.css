@@ -25,7 +25,18 @@ body {
       list-style-type: none;
     }
 
-     #content {
-  flex: 1;
-  padding: 13px 13px 12px 12px;
-     }
+   @media only screen and (max-width: 599px) {
+           #content {
+                 flex: 1;
+                 padding: 12px;
+           }
+           
+   }
+
+   @media only screen and (min-width: 600px) {
+          #content {
+                flex: 1;
+                padding: 24px;
+          }
+   }
+           
